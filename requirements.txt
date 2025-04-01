@@ -7,3 +7,4 @@ psycopg2-binary
 dotenv
 requests
 httpx
+pandas

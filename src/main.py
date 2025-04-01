@@ -13,14 +13,14 @@ API_URL=os.environ.get("API_URL")
 API_KEY=os.environ.get("API_KEY")
 API_HOST=os.environ.get("API_HOST")
 
-# @asynccontextmanager
-# async def lifespan(app: FastAPI):
-#     init_db()
-#     yield
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
 
-#app=FastAPI(lifespan=lifespan)
-app=FastAPI()
-app.include_router(events_router, prefix="/")
+app=FastAPI(lifespan=lifespan)
+# app=FastAPI()
+app.include_router(events_router, prefix="/sql")
 
 @app.get("/")
 def show_root():
