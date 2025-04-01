@@ -1,0 +1,9 @@
+sqlmodel
+fastapi[standard]
+uvicorn
+sqlalchemy
+pydantic
+psycopg2-binary
+dotenv
+requests
+httpx
